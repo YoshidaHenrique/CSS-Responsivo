@@ -1,0 +1,211 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Cabin", sans-serif;
+   
+}
+
+.container,
+.itens {
+    max-width: 1388px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    padding: 0;
+}
+
+header {
+    font-size: 20px;
+    background-color: #fff;
+}
+
+header img {
+    max-width: 120px;
+    margin-left: 16px;
+}
+
+header nav li {
+    display: inline;  /* deixa os itens do menu lado a lado */
+    margin-left: 16px;
+}
+
+header nav li a {
+    color: #eb4321; 
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header .container,
+section .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#about .container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    text-align: justify;
+} 
+
+#about img {
+    height: 450px;
+}
+
+section .container {
+    margin-top: 30px;
+}
+
+hr {
+    border: 0; 
+    height: 1px;
+    background-color: #000000; 
+    margin-top: 8px;
+    margin-bottom: 8px; 
+} 
+
+.container h2{
+    font-size: 30px;
+}
+
+.container p {
+    font-size: 16px;
+}
+
+.container article{
+    text-align: center;
+    margin: 20px;
+}
+
+.itens {
+    display: flex;
+}
+
+.item img {
+    height: auto;
+    max-width: 100%;
+}
+
+.container article p,
+.container article button {
+    margin-top: 10px;
+}
+
+.itens {
+    display: grid;
+    grid-template-columns: 24.25% 24.25% 24.25% 24.25%; /*O valor considera o 1% nas duas colunas. ou pode ser definido como: repeat(3, 32.6%)*/
+    column-gap: 1%;
+    row-gap: 5%;
+}
+
+button {
+    font-size: 14px;
+    background-color: #f5765d;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    height: 22px;
+    width: 130px;
+}
+
+footer{
+    margin-top: 100px;
+    background-color: black;
+    color: #f5765d;
+    padding: 16px 0;
+    width: auto;
+    text-align: center;
+}
+
+@media screen and (max-width: 640px) {
+    .container,
+    .itens {
+        display: block;
+        max-width: 90%;
+    }
+
+    .itens {
+        text-align: center;
+    }
+    
+    header nav li {
+        display: block;  
+        margin-left: 16px;
+    }
+    
+    #about .container {
+        display: block;
+        align-items: flex-start;
+        gap: 20px;
+        text-align: justify;
+    }
+    
+    #about img {
+        height: auto; /*mantém a proporção da imagem*/
+        max-width: 100%; /*garante que a imagem não seja mais larga que o container*/
+    }
+    
+    section .container {
+        margin-top: 30px;
+    }
+
+    .container h2{
+        margin-top: 15px;
+        font-size: 25px;
+    }
+    
+    .container article{
+        text-align: center;
+        margin: 20px;
+    }
+    
+    .itens article img {
+        height: auto;
+        max-width: 100%;
+    }
+    
+    .container article p,
+    .container article button {
+        margin-top: 10px;
+    }
+
+    .itens {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 641px) and (max-width: 1023px) {
+    .container,
+    #about .container {
+        display: block;
+        max-width: 90%;
+    }
+    
+    header nav{
+        display: flex;  /*deixa os itens do menu lado a lado*/
+        margin-left: 16px;
+    }
+
+    .container h2{
+        margin-top: 20px;
+        font-size: 25px;
+    }
+
+    #about img {
+        height: auto; /*mantém a proporção da imagem*/
+        max-width: 100%; /*garante que a imagem não seja mais larga que o contêiner*/
+    }
+    
+    .itens {
+        grid-template-columns: repeat(2, 49%);
+        max-width: 90%;
+    }
+
+    .itens article img {
+        height: auto;
+        max-width: 100%;
+    }
+
+}
